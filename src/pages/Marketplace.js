@@ -64,10 +64,10 @@ function Marketplace(props) {
         setLedger(_ledger)
 
         const onSale = getOnSale(_ledger)
-        console.log(_ledger)
-        console.log(onSale)
+        // console.log(_ledger)
+        // console.log(onSale)
         setOnSaleList(onSale)
-        console.log(mp)
+        // console.log(mp)
 
     }, [])
 

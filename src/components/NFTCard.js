@@ -1,10 +1,12 @@
 
 import { useWeb3React } from '@web3-react/core'
 
-function bid(contract, tokenId, price){
+function bid(contract,library, tokenId, price){
+    contract = contract.connect(library.getSigner())
     contract.bid(tokenId,{
         value: price
     })
+    console.log(contract)
 }
 
 function NFTCard({contract, tokenId, seller, price}){
@@ -15,7 +17,7 @@ function NFTCard({contract, tokenId, seller, price}){
             <div>{seller}</div>
             <div>{price}</div>
             <button onClick={()=>{
-                bid(contract, tokenId)
+                bid(contract,library, tokenId, "123123")
             }}>Buy</button>
         </div>
     )
