@@ -47,7 +47,7 @@ function Collection(props) {
         setNftContract(_nftContract)
 
         const _marketplaceContract = getContract(address.marketplace, marketplaceAbi, library)
-        setMarketplaceContract(_nftContract)
+        setMarketplaceContract(_marketplaceContract)
 
         const _collection = await getCollection(_nftContract, account)
         console.log(_collection)

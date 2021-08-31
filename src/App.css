@@ -1,6 +1,8 @@
 .App {
   text-align: center;
   display: flex;
+  background: linear-gradient(to right, #434343 0%, black 100%) no-repeat center fixed;
+
 }
 
 .App-logo {

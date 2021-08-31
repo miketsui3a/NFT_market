@@ -13,11 +13,19 @@ const StyledNavBarDiv = styled.div`
 background: black;
 float: left;
 height: 100vh;
-width: 100px;
+width: 150px;
+padding: 10px
 `
 
 const StyledNavButton = styled.button`
 width:100%;
+height: 30px;
+margin-top: 30px;
+background: transparent;
+color: white;
+border-radius: 50px;
+font-size: 20px;
+&:focus { outline: none; }
 `
 
 function NavBar(props) {
@@ -25,12 +33,13 @@ function NavBar(props) {
 
     return (
         <StyledNavBarDiv>
-            <button onClick={() => { account ? deactivate() : activate(injected) }}>{
-                account ? account.slice(0, 6) + "..." : "Connect"
-            }</button>
-            <StyledNavButton><Link to="/collection">Collections</Link></StyledNavButton>
-            <StyledNavButton><Link to="/marketplace">marketplace</Link></StyledNavButton>
-            <StyledNavButton><Link to="/marketplace">my offer</Link></StyledNavButton>
+            <StyledNavButton onClick={() => { account ? deactivate() : activate(injected) }}>{
+                account ? account.slice(0, 6) + "..." : "CONNECT"
+            }</StyledNavButton>
+            {/* <StyledNavButton><Link to="/collection">Collections</Link></StyledNavButton> */}
+            <Link to="/marketplace"><StyledNavButton>MARKET</StyledNavButton></Link>
+            <Link to="/order"><StyledNavButton>TRADE</StyledNavButton></Link>
+            {/* <StyledNavButton><Link to="/marketplace">my offer</Link></StyledNavButton> */}
         </StyledNavBarDiv>
     )
 }

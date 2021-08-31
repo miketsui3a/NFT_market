@@ -13,12 +13,12 @@ function NFTCard({contract, tokenId, seller, price}){
     const { library, account } = useWeb3React()
     return (
         <div>
-            <div>{tokenId}</div>
-            <div>{seller}</div>
-            <div>{price}</div>
-            <button onClick={()=>{
+            <div>id: {tokenId}</div>
+            <div>seller: {seller}</div>
+            <div>price: {price} FTM</div>
+            {/* <button onClick={()=>{
                 bid(contract,library, tokenId, "123123")
-            }}>Buy</button>
+            }}>Buy</button> */}
         </div>
     )
 }
